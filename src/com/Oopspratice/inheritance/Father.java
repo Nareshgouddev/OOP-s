@@ -1,35 +1,24 @@
 package com.Oopspratice.inheritance;
 
 import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class Father {
-    static void main() {
-        int[] arr={3,7,5};
-        System.out.println(positive(arr,arr[0]));
+    public Father() {
     }
-    private static int positive(int[] nums,int k) {
-            int low = 1;
-            int high = 0;
-            for (int n : nums)
-                high = Math.max(high, n);
-            int ans = high;
-            while (low <= high) {
 
-                int mid = (low + high) / 2;
+//    public Father(int a, int b) {
+//        System.out.println(a+b);
+//    }
 
-                int sum = 0;
-                for (int n : nums) {
-                    sum += Math.ceil((double)n / mid);
-                }
-
-                if (sum <= k) {
-                    ans = mid;        // possible answer
-                    high = mid - 1;   // try smaller
-                } else {
-                    low = mid + 1;
-                }
-            }
-
-            return ans;
-        }
+    public void Eating(){
+        System.out.println("Eating with left hand");
+    }
+//    public void Multi(){
+//
+//        Scanner sc=new Scanner(System.in);
+//        int a=sc.nextInt();
+//        int b=sc.nextInt();
+//        System.out.println(a+b);
+//    }
 }
